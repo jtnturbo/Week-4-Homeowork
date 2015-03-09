@@ -1,0 +1,73 @@
+// Lab 2 flow chart outlining the school lunch process
+
+import java.util.Scanner;
+
+public class Lab2 
+{
+	public static void main( String[] args )
+	{ // main method begins
+		Scanner input = new Scanner ( System.in ); // scanner input declared
+		
+		int option;
+		String breakfastResponse;
+		
+		System.out.println( "Flow Chart of a School Lunch Process\n"); // Title displayed
+		
+		// First steps of the flow chart displayed
+		System.out.printf( "  %s\n    %s\n" , "Hungry" , "|" );
+		System.out.printf( "%s\n    %s\n", "Get in line" , "|" );
+		System.out.printf( "%s\n              %s\n" , "Buy lunch_____" , "|" );
+		
+		System.out.print( "       If thirsty enter 1, if not enter 0: " ); //prompting user to enter an option between 1 and 0
+		option = input.nextInt(); // allows user to enter an option
+		
+		// if thirsty program will ask the user if they had breakfast
+		if ( option == 1)
+		{
+			System.out.print( "       Have you had breakfast? (enter yes or no): "); // asking user if they had 
+			breakfastResponse = input.next();									//breakfast and prompting them to enter a response
+			
+		
+
+			if ( breakfastResponse.equals("yes"))
+				// beginning of if statement with breakfast option yes
+				// following steps execute if "yes" was the response
+			{
+				System.out.printf( "       %s\n%s" , "/" , "Buy diet coke");
+				System.out.printf( "\n    %s\n%s" , "|" , "Eat lunch");
+				System.out.printf( "\n    %s\n%s\n" , "|" , "Return tray");
+				System.out.printf( "    %s\n%s" , "|" , "  Leave" );
+			} // if statement breakfast option yes ends
+			
+			if ( breakfastResponse.equals("no"))
+				// beginning of if statement with breakfast option no
+				// following steps execute if "no" was the response
+			{
+				System.out.printf( "       %s\n%s" , "/" , "Buy coke");
+				System.out.printf( "\n    %s\n%s" , "|" , "Eat lunch");
+				System.out.printf( "\n    %s\n%s\n" , "|" , "Return tray");
+				System.out.printf( "    %s\n%s" , "|" , "  Leave" );
+			} // if statement breakfast option no ends
+		} // if statement option 1 ends
+		
+		// if not thirsty program will execute continuation of the lunch process with "eat lunch"
+		if ( option == 0)
+		{ // beginning of if statement with option 0
+			System.out.printf( "       %s\n%s" , "/" , "Eat lunch");
+			System.out.printf( "\n    %s\n%s\n" , "|" , "Return tray");
+			System.out.printf( "    %s\n%s" , "|" , "  Leave" );		
+		} // if statement option 0 ends
+		
+		// if thirsty but user doesn't want coke program will execute "get water" followed by the remaining steps
+		else if ( option >= 2)
+		{ // if statement option other than 1 and 0 begins 
+			System.out.printf( "       %s\n%s" , "/" , "Get water");
+			System.out.printf( "\n    %s\n%s" , "|" , "Eat lunch");
+			System.out.printf( "\n    %s\n%s\n" , "|" , "Return tray");
+			System.out.printf( "    %s\n%s" , "|" , "  Leave" );
+		} // if statement option other than 1 and 0 ends
+		
+		
+	} // end of main method
+
+} // end of public class Lab2
