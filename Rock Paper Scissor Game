@@ -1,0 +1,60 @@
+
+
+import java.util.Scanner;
+
+public class RockPaperScissorGame 
+{
+	public static void main( String[] args)
+	{
+		Scanner input = new Scanner( System.in);
+		Scanner reader = new Scanner(System.in);
+		
+		boolean go = true;
+		boolean run = true;
+		 
+		
+		System.out.println( "Rock Paper Scissor Game");
+		System.out.println( "r|rock\np|paper\ns|scissor");
+		
+		
+		
+	
+		while ( go == true )
+		{	
+			while ( run )
+			{
+				System.out.print( "\nDraw!(enter r, p, or s): ");
+				char handDraw = reader.next(".").charAt(0);
+			
+				if ( handDraw == 'r')
+					System.out.println( "Rock loses to paper, you lose");
+		
+				if ( handDraw == 'p')
+					System.out.println( "Paper beats rock, you win!");
+		
+				if ( handDraw == 's')
+					System.out.println( "Scissors loses to rock, you lose");
+				run = false;
+			
+				
+			}
+			
+			
+			if (run == false)
+		           System.out.print("\nRun again? (enter y or n): ");
+			   		char response = reader.next().charAt(0);
+
+		       if ( response == 'y')
+		       {
+		           run = true;
+		       }
+		       else if ( response == 'n')
+		       {
+		           System.out.println("Goodbye.");
+		           go = false;
+		       } 
+			
+		}		
+		
+	}
+}
