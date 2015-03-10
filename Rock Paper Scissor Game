@@ -58,3 +58,4 @@ public class RockPaperScissorGame
 		
 	}
 }
+// Nice...can you explain the thinking behind go and run variable?  BTW, do you have a flow chart for this game?
